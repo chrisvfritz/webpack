@@ -1,10 +1,10 @@
 module.exports = {
   root: true,
-  {{#if_eq lintConfig "standard"}}
+  {{#if_eq eslintConfig "standard"}}
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
   extends: 'standard',
   {{/if_eq}}
-  {{#if_eq lintConfig "airbnb"}}
+  {{#if_eq eslintConfig "airbnb"}}
   extends: 'airbnb-base',
   {{/if_eq}}
   // required to lint *.vue files
@@ -13,11 +13,11 @@ module.exports = {
   ],
   // add your custom rules here
   'rules': {
-    {{#if_eq lintConfig "standard"}}
+    {{#if_eq eslintConfig "standard"}}
     // allow paren-less arrow functions
     'arrow-parens': 0,
     {{/if_eq}}
-    {{#if_eq lintConfig "airbnb"}}
+    {{#if_eq eslintConfig "airbnb"}}
     'import/no-unresolved': 0,
     {{/if_eq}}
     // allow debugger during development
